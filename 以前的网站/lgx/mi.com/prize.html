@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <style>
+    ul {
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+    }
+    body {
+        margin: 0;
+    }
+    .startDiv {
+        position: fixed;
+        bottom: 10%;
+        width: 100%;
+        height: 10%;
+    }
+    .btnPrize {
+        margin: 0 5%;
+        width: 90%;
+        height: 50%;
+        border: none;
+        border-radius: 15px;
+        background-color: rgb(224, 102, 2);
+    }
+    .prizeLi {
+        display: inline-block;
+        width: 30%;
+        height: 100px;
+        background-color: rgb(253, 0, 0);
+        margin: 15px 1.6% 0px;
+        font-size: 30px;
+        overflow: hidden;
+    }
+    .prizeLi:nth-child(4) {
+        margin-right: 15%;
+    }
+    .prizeLi:nth-child(5) {
+        float: right;
+    }
+    .prizeLi:nth-child(6) {
+        margin-right: 15%;
+    }
+    .prizeLi:nth-child(7) {
+        float: right;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="pagen">
+        <ul class="prizeUl">
+            <li class="prizeLi">aa</li>
+            <li class="prizeLi">bb</li>
+            <li class="prizeLi">cc</li>
+            <li class="prizeLi">dd</li>
+            <li class="prizeLi">ee</li>
+            <li class="prizeLi">ff</li>
+            <li class="prizeLi">gg</li>
+            <li class="prizeLi">hh</li>
+            <li class="prizeLi">ii</li>
+            <li class="prizeLi">jj</li>
+        </ul>
+    </div>
+    <div class="startDiv">
+    <button class="btnPrize">开始抽奖</button>
+    </div>
+    <script>
+        let List = $(".prizeLi");
+        let iid = null;
+        let iid2 = null;
+        let tid = null;
+        let i = 0;
+        let ii = 0;
+        let k = 0;
+
+        $(".btnPrize").click( () => {
+            
+            let randomx = random();
+            // console.log(randomx);
+            fastGun();
+            if( tid != null){
+                clearTimeout(tid);
+            }
+            tid = setTimeout(() => {
+                clearInterval(iid2);
+                ii = 0;
+                console.log(randomx);
+            }, randomx*1000);
+        })
+
+        function random(){
+            let randomx = Math.floor(Math.random()*10);
+            return randomx >= 2 ? randomx : randomx + 4 ; 
+        }
+        function gunDong(){
+            switch (i) {
+                case 3:
+                    k = 4;
+                    break; 
+                case 4:
+                    k = 6;
+                    break;                    
+                case 5:
+                    k = 9;
+                    break; 
+                case 6:
+                    k = 8;
+                    break;                    
+                case 7:
+                    k = 7;
+                    break; 
+                case 8:
+                    k = 5;
+                    break;                    
+                case 9:
+                    k = 3;
+                    break; 
+                default:
+                    k = i;
+                    break;
+            }
+            return k;
+        }
+        function fastGun(){
+            if( iid != null){
+                clearInterval(iid);
+            }
+            iid = setInterval(() => {
+                k = gunDong();
+                changeColor(); 
+                if( ii == 2) {
+                    lowGun();
+                    clearInterval(iid);
+                }               
+            }, 150);
+        }
+        function lowGun(){
+            if( iid2 != null){
+                clearInterval(iid);
+            }
+            iid2 = setInterval(() => {
+                k = gunDong();
+                changeColor();                
+            }, 1000);
+        }
+        function changeColor(){
+
+            List.eq(k).css({'background-color':'blue'});
+            List.eq(k).siblings().css({'background-color':'red'});
+            i++;
+            // console.log(i);
+            if( i == 10){ 
+                i = 0;
+                ii++; 
+            }
+        }
+    </script>
+</body>
+</html>

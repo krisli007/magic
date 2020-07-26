@@ -1,0 +1,273 @@
+html,
+body {
+    width: 1226px;
+    margin: 0px auto;
+    padding: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.top-nav {
+    position: relative;
+    margin: 0 auto;
+}
+.top-left,
+.top-center {
+    display: inline-block;
+}
+
+.logo {
+    position: absolute;
+    top: 25px;
+    width: 50px;
+    height: 50px;
+    background: url('../images/milogo.png') no-repeat center;
+    background-size: 60%;
+    background-color: #FF6700;
+    border:0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.top-center {
+    height: 100px;
+    margin-left: 234px;
+}
+.nav-list {
+    display: inline-block;
+    padding: 0 5px;
+}
+.nav-list-link {
+    font-size: 17px;
+    line-height: 100px;
+    color: black;
+}
+.nav-list-link:hover {
+    color: #FF6700;
+}
+
+.top-right {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    font-size: 0;
+}
+.search-text {
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    outline: none;
+    border: 1px solid rgba(128, 128, 128, 0.308);
+
+}
+.search-btn {
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    background: url('../images/search.png') no-repeat;
+    background-size: 50%;
+    background-position: center;
+    outline: none;
+    border: 1px solid rgba(128, 128, 128, 0.308);
+    border-left: none;
+    cursor: pointer;
+}
+.search-btn:hover {
+    background: url('../images/search-hover.png') no-repeat center;
+    background-size: 50%;
+    background-color: #ff6700;
+    transition: all 0.15s ease-in;
+
+}
+
+
+.background {
+    position: relative; /* 设定相对定位，给绝对定位做参考 */
+    width: 1226px;
+    height: 460px;
+    background-color: #D5DDE0;
+}
+.left-nav {
+    position: absolute;
+    z-index: 1;
+    width: 234px;
+    height: 460px;
+    background-color: #55585A;
+}
+.item-list-ul   {
+    margin: 20px 0;
+}
+.list-content {
+    display: inline-block;
+    width: 234px;
+    height: 42px;
+    font-size: 14px;
+    text-indent: 30px;
+    line-height: 42px;
+    color: rgb(224, 224, 224);
+    background: url(../images/you.png) no-repeat;
+    background-size: 6%;
+    /* background-position: right center; */
+    background-position-x: 200px;
+    background-position-y: 12px;
+}
+.item-list:hover {
+    background-color: #FF6700;
+}
+.item-list:hover .item-content {
+    display: block;
+}
+.item-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 234px;
+    width: 500px;
+    height: 460px;
+    background-color: #fff;
+    box-shadow: 3px 3px 20px rgba(128, 128, 128, 0.582);
+}
+.goods-list {
+    position: absolute;
+    width: 248px;
+    height: 77px;
+    line-height: 77px;
+}
+.goods-list img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin: 0 16px 0 20px;
+} 
+
+.photo-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1226px;
+    height: 460px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+.photo-on {
+    opacity: 1;
+    transition: all 0.5s ease-in;
+}
+
+.photo-btn-list {
+    position: absolute;
+    bottom:10px;
+    right: 30px;
+}
+.photo-btn-list li {
+    display: inline-block; 
+}
+
+.photo-btn {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 2px;
+    border: 2px solid rgba(104, 104, 104, 0.801);
+    border-radius: 50%;
+    background-color: rgba(80, 80, 80, 0.671);
+}
+.photo-btn:hover {
+    background-color: rgb(255, 255, 255);
+}
+.photo-btn-on {
+    background-color: rgb(255, 255, 255);
+}
+
+.prev,
+.next {
+    position: absolute;
+    background-color: transparent;
+    width: 40px;
+    height: 60px;
+    outline: none;
+    border: 0;
+    font-size: 30px;
+    color: rgba(131, 131, 131, 0.377);
+    cursor: pointer;
+}
+.prev:hover,
+.next:hover {
+    background-color: rgba(102, 102, 102, 0.733);
+    color: white;
+}
+.prev {
+    left: 234px;
+    top: 195px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.next {
+    right: 0;
+    top: 195px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+}
+.header-middle {
+    position: relative;
+    width: 1226px;
+    height: 170px;
+    margin: 10px auto;
+    overflow: hidden;
+
+}
+.header-middle-photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.header-middle li {
+    display: inline-block;
+}
+.header-middle-img {
+    width: 316px;
+    height: 170px;
+    margin-left: 11px;
+    cursor: pointer;
+
+}
+.header-middle-left {
+    width: 234px;
+    height: 170px;
+    background-color: #5F5750;
+    text-align: center;
+    
+}
+.header-left li {
+    display: inline-block;
+}
+.header-icon {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: url('../images/1.png') no-repeat center;
+    background-size: 60%;
+    margin: 10px 10px;
+    color: aliceblue;
+    font-size: 10px;
+}
+.header-icon:hover{
+    color: grey;
+}
+
+.header-bottom {
+    width: 1226px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+

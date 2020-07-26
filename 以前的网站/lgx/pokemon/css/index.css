@@ -1,0 +1,177 @@
+body {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 15%;
+}
+.welcomeDiv {
+    /* display: none; */
+    position: absolute;
+    top: 22%;
+    width: 100%;
+}
+.welcome {
+    width: 100%;
+    height: 50%;
+}
+
+h1 {
+    margin-top: 10%;
+}
+.caidan {
+    display: none;
+}
+h1 img {
+    width: 50%;
+    height: auto;
+}
+
+.pagen {
+    display: none;
+}
+/* Page2 */
+ul {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+.startDiv {
+    width: 100%;
+}
+.btnPrize {
+    margin: 2% 5%;
+    width: 90%;
+    padding: 3% 0;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(224, 102, 2);
+}
+
+.prizeLi:nth-child(1) {
+    background: url('../images/p1.jpg') no-repeat center center;
+    background-color: rgb(167, 167, 167);
+    background-size: contain;
+}
+.prizeLi:nth-child(2) {
+    background: url('../images/p2.jpg') no-repeat center center;
+    background-color: rgb(167, 167, 167);
+    background-size: 90%;
+}
+.prizeLi:nth-child(3) {
+    background: url('../images/p3.jpg') no-repeat center center;
+    background-color: rgb(167, 167, 167);
+    background-size: 80%;
+}
+.prizeLi:nth-child(4) {
+    float: left;
+    margin-right: 15%;
+    background: url('../images/p4.jpg') no-repeat center center;
+    background-color: rgb(167, 167, 167);
+    background-size: contain;
+}
+.prizeLi:nth-child(5) {
+    float: right;
+    background: url('../images/p5.jpg') no-repeat center center;
+    background-color: rgb(167, 167, 167);
+    background-size: 90%;
+}
+.prizeLi:nth-child(6) {
+    float: left;
+    margin-right: 15%;
+    background: url('../images/p6.jpg') no-repeat center center;
+    background-color: rgb(167, 167, 167);
+    background-size: 90%;
+}
+.prizeLi:nth-child(7) {
+    float: right;
+    background: url('../images/p7.jpg') no-repeat center center;
+    background-color: rgb(167, 167, 167);
+    background-size: 90%;
+}
+.prizeLi:nth-child(8) {
+    background: url('../images/p8.jpg') no-repeat center center;
+    background-color: rgb(167, 167, 167);
+    background-size: 80%;
+}
+.prizeLi:nth-child(9) {
+    background: url('../images/p9.jpg') no-repeat center center;
+    background-color: rgb(167, 167, 167);
+    background-size: 80%;
+}
+.prizeLi:nth-child(10) {
+    background: url('../images/p10.jpg') no-repeat center center;
+    background-color: rgb(167, 167, 167);
+    background-size: 80%;
+}
+.prizeLi {
+    display: inline-block;
+    width: 30%;
+    height: 100px;
+    line-height: 20px;
+    border-radius: 10px;
+    color: white;
+    margin: 15px 1.6% 0px;
+    font-size: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+p {
+    text-align: center;
+}
+/* .prizeList {
+    width: 100%;
+    height: 15%;
+    overflow: scroll;
+} */
+.prizeBtn {
+    margin: 0 20px;
+    width: 30%;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(224, 102, 2);
+}
+
+/* Page3 */
+#send {
+    display: block;
+    margin: 3% 25%;
+    width: 50%;
+    height: 8%;
+}
+table {
+    width: 100%;
+    text-align: center;
+}
+td {
+    width: 30%;
+}
+/* Page4 */
+.page4img {
+    width: 100%;
+}
+/* footer */
+.footer {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    width: 100%;
+    height: 8%;
+    border-top: 1px solid rgba(240, 240, 240, 0.438);
+    background-color: rgb(248, 248, 248);
+}
+.footer-ul {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.footer-li {
+    display: inline-block;
+    list-style: none;
+    width: 25%;
+    height: 100%;
+    padding: 0;
+}
+.footer-li > img {
+    margin: 15% 0;
+    height: 50%;
+}
