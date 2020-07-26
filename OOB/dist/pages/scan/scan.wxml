@@ -1,0 +1,35 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="card" bindtap="confirmMode">
+        <block wx:if="{{confirmWord}}">
+            <view class="tips" style="{{anonymousState__temp}}">.</view>
+        </block>
+        <view class="scan">
+            <image src="{{Search}}" catchtap="toScan" class="scan-img" data-e-tap-so="this"></image>
+        </view>
+        <block wx:if="{{result}}">
+            <block wx:if="{{$taroCompReady}}" wx:for="{{loopArray85}}" wx:for-item="item" wx:for-index="index">
+                <block wx:if="{{index === position + 1}}">
+                    <view class="word-item">
+                        <image src="{{Bujian}}" class="bujian"></image>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view class="word-item">{{item.$original}}</view>
+                </block>
+            </block>
+        </block>
+        <block wx:if="{{!scanStatus}}">
+            <view bindtap="back" class="back-logo" style="{{anonymousState__temp2}}">{{'<'}}</view>
+        </block>
+        <block wx:if="{{scanStatus}}">
+            <view class="scan-box" catchtap="stopPropagation">
+                <view class="brain" style="{{anonymousState__temp3}}">
+                    <image src="{{Brain}}" class="brain-img"></image>
+                    <view class="confirm-word">{{confirmWord ? word1 : word2}}</view>
+                </view>
+                <view class="col-line line"></view>
+                <view class="row-line line"></view>
+            </view>
+        </block>
+    </view>
+</block>

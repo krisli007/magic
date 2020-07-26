@@ -1,0 +1,39 @@
+.box {
+  padding-top: 10vh;
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: #000;
+}
+.scan {
+  position: absolute;
+  top: 4vh;
+  left: 42vw;
+}
+.scan .scan-img {
+  width: 16vw;
+  height: 16vw;
+}
+.common {
+  position: absolute;
+  top: 75vh;
+  width: 25vw;
+  height: 20vh;
+  color: #fff;
+  font-size: x-small;
+  background-color: #000;
+  transition: all 0.6s ease;
+  border: 5rpx solid red;
+}
+.special {
+  z-index: 1;
+  top: 15vh;
+  width: 60vw;
+  height: 55vh;
+  font-size: xx-large;
+}
+.taro_page {
+  height: 100%;
+}
+.text {
+  position: absolute;
+}

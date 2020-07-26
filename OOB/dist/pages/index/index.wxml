@@ -1,0 +1,10 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="box">
+        <view class="scan" bindtap="toScanPage" data-e-tap-so="this">
+            <image src="{{Scan}}" class="scan-img"></image>
+        </view>
+        <view wx:key="id" class="{{'common ' + (item.position === 0 ? 'special' : '')}}" style="{{item.$loopState__temp2}}" bindtap="changeBox" wx:for="{{loopArray69}}" wx:for-item="item" wx:for-index="_anonIdx2" data-e-tap-so="this" data-e-tap-a-a="{{item.position}}" data-e-tap-a-b="{{item.$original.id}}">
+            <card compid="{{item.$compid__3}}"></card>
+        </view>
+    </view>
+</block>

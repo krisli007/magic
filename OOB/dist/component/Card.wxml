@@ -1,0 +1,5 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="card">
+        <view class="word-item" wx:for="{{word}}" wx:for-item="item" wx:for-index="_anonIdx2">{{item}}</view>
+    </view>
+</block>
