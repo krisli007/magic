@@ -1,4 +1,5 @@
-# magic
-magic project code
+# magic feat2
 
-**testtest**
+## lgx：自己19年的个人网站
+
+## OOB 魔术小程序
